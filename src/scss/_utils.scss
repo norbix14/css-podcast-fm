@@ -1,0 +1,33 @@
+@use 'base/variables' as var;
+@use 'base/mixins' as mx;
+
+.text-center {
+  text-align: center;
+}
+
+.bg-primary {
+  background-color: var.$color_primary;
+}
+
+.btn-primary {
+  @include mx.button(var.$color_primary, var.$color_secondary);
+}
+
+.btn-plan {
+  @extend .btn-primary;
+  margin-top: 2rem;
+  display: block;
+  border: 2px solid var.$color_white;
+}
+
+.link-active {
+  color: var.$color_secondary;
+}
+
+.section {
+  padding: 3rem 0;
+  overflow: hidden;
+  @include mx.media-tablet {
+    padding: 8rem 0;
+  }
+}

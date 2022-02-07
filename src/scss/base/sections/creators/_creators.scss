@@ -1,0 +1,16 @@
+@use 'base/variables' as var;
+@use 'base/mixins' as mx;
+
+.creator {
+  &-grid {
+    @include mx.media-tablet {
+      @include mx.grid(2, 2rem);
+      align-items: center;
+    }
+  }
+  &-content {
+    h2 {
+      @include mx.heading-h2(var.$color_secondary, var.$color_primary);
+    }
+  }
+}

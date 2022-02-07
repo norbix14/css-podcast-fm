@@ -1,0 +1,13 @@
+@mixin bg-image($url, $degradate) {
+  background-image: linear-gradient($degradate 0%, $degradate 100%), url($url);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: top center;
+}
+
+@mixin bg-svg($url) {
+  background-image: url($url);
+  background-repeat: no-repeat;
+  background-position: 50% 2rem;
+  background-size: 10rem;
+}

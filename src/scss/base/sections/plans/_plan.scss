@@ -1,0 +1,58 @@
+@use 'base/variables' as var;
+@use 'base/mixins' as mx;
+
+.plan {
+  flex-grow: 1;
+  padding: 16rem 4rem 4rem 4rem;
+  margin-bottom: 2rem;
+  transition: transform 0.2s ease;
+  background-color: var.$color_white;
+  &.basic {
+    @include mx.bg-svg('../img/svg/icono_inicio.svg');
+  }
+  &.business {
+    order: -1;
+    background-color: var.$color_primary;
+    @include mx.bg-svg('../img/svg/icono_negocio.svg');
+    @include mx.media-desktop {
+      order: unset;
+      margin-block: -5rem;
+      border-radius: 2rem;
+      background-position: 50% 7rem;
+      padding-top: calc(16rem + 5rem);
+      z-index: 10;
+    }
+    .btn-plan {
+      &:hover {
+        background-color: var.$color_white;
+      }
+    }
+  }
+  &.pro {
+    @include mx.bg-svg('../img/svg/icono_pro.svg');
+  }
+  h3 {
+    text-transform: uppercase;
+  }
+  .price {
+    font-size: 1.8rem;
+    text-align: center;
+    font-weight: 700;
+    text-transform: uppercase;
+  }
+  .list {
+    li {
+      text-align: center;
+      margin-bottom: 2rem;
+      &:last-of-type {
+        margin-bottom: 0;
+      }
+    }
+  }
+  @include mx.media-tablet {
+    &:hover {
+      transform: scale(1.05);
+    }
+    margin-bottom: 0;
+  }
+}

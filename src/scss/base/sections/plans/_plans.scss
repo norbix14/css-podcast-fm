@@ -1,0 +1,26 @@
+@use 'base/variables' as var;
+@use 'base/mixins' as mx;
+
+.plans {
+  background-color: var.$color_secondary;
+  h2 {
+    @include mx.heading-h2(var.$color_white, var.$color_primary);
+  }
+  &-description {
+    color: var.$color_white;
+  }
+  &-selection {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    @include mx.media-tablet {
+      max-width: 80rem;
+      margin-inline: auto;
+      margin-block-start: 10rem;
+    }
+    @include mx.media-desktop {
+      gap: 0;
+      flex-direction: row;
+    }
+  }
+}

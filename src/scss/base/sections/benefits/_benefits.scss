@@ -1,0 +1,30 @@
+@use 'base/variables' as var;
+@use 'base/mixins' as mx;
+
+.benefits {
+  background-color: var.$color_primary;
+  &-grid {
+    @include mx.media-tablet {
+      @include mx.grid(5, 4rem);
+      align-items: center;
+    }
+  }
+  &-content {
+    grid-column: 1 / 4;
+    h2 {
+      @include mx.heading-h2(var.$color_secondary, var.$color_white);
+    }
+  }
+  &-image-container {
+    width: 50%;
+    margin: 0 auto;
+    grid-column: 4 / 6;
+    transition: transform 0.2s ease;
+    &:hover {
+      transform: rotate(6deg) scale(1.05);
+    }
+    @include mx.media-tablet {
+      width: 100%;
+    }
+  }
+}

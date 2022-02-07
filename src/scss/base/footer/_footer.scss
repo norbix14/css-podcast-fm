@@ -1,0 +1,61 @@
+@use 'base/variables' as var;
+@use 'base/mixins' as mx;
+
+.footer {
+  color: var.$color_white;
+  background-color: var.$color_secondary;
+  &-grid {
+    padding: 5rem 0;
+  }
+  &-image-container {
+    width: 50%;
+    margin: 0 auto;
+  }
+  &-widget {
+    margin-bottom: 2rem;
+    &:last-of-type {
+      margin-bottom: 0;
+    }
+    h3 {
+      text-align: left;
+      margin-bottom: 3rem;
+      color: var.$color_primary;
+    }
+  }
+  &-nav {
+    a {
+      display: block;
+      margin-bottom: 1.5rem;
+      transition: color 0.2s ease;
+      color: var.$color_white;
+      &:last-of-type {
+        margin-bottom: 0;
+      }
+      &:hover {
+        color: var.$color_primary;
+      }
+    }
+  }
+  &-copyright {
+    padding: 1rem;
+    text-transform: uppercase;
+    text-align: center;
+    border-top: 2px solid var.$color_primary;
+    max-width: 120rem;
+    margin: 0 auto;
+    p {
+      color: var.$color_white;
+    }
+  }
+  @include mx.media-tablet {
+    &-image-container {
+      width: 80%;
+    }
+    &-widget {
+      margin-bottom: 0;
+    }
+    &-grid {
+      @include mx.grid(4, 3rem);
+    }
+  }
+}

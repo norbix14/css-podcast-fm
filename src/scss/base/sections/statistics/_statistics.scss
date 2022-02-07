@@ -1,0 +1,8 @@
+@use 'base/variables' as var;
+@use 'base/mixins' as mx;
+
+.statistics {
+  h2 {
+    @include mx.heading-h2(var.$color_secondary, var.$color_primary);
+  }
+}

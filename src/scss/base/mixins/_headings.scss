@@ -1,0 +1,18 @@
+@use 'media-queries' as mq;
+
+@mixin heading-h2($color, $underline) {
+  display: inline-block;
+  margin-top: 5rem;
+  color: $color;
+  &::after {
+    content: '';
+    height: 1rem;
+    width: calc(100% + 1rem);
+    display: block;
+    margin: -1.4rem 0 0 0;
+    background-color: $underline;
+  }
+  @include mq.media-tablet {
+    margin-top: 0;
+  }
+}
