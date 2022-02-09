@@ -90,14 +90,10 @@ cp -r src/!(images_raw|scss) dist/
 
 ## run the app
 
-* in the current directory (delivery)
+* using the current folder
 
   * double click on **src/index.html** or open it with **Live Server**
 
 * using the **dist** folder
 
-```cmd
-cd dist/
-```
-
-* double click on **index.html** or open it with **Live Server**
+  * double click on **dist/index.html** or open it with **Live Server**
